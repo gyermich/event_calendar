@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :set_product, only[:show, :edit, :destroy, :show]
+  before_action :set_event, only:[:show, :edit, :destroy, :show]
 
   def new
     @event = Event.new
@@ -9,7 +9,7 @@ class EventsController < ApplicationController
   end
 
   def index
-    @event = Event.all
+    @events = Event.all
   end
 
   def create
@@ -33,6 +33,6 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:events).permit(:name, :url, :date)
+    params.require(:event).permit(:name, :url, :date)
   end
 end
