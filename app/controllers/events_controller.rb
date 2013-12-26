@@ -27,6 +27,10 @@ class EventsController < ApplicationController
   def destroy
   end
 
+  def calendar_view
+    @events = Event.all
+  end
+
   private
   def set_event
     @event = Event.find(params[:id])

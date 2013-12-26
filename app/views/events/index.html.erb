@@ -1,3 +1,10 @@
 <%= @events.inspect %>
 have a calendar table or collection 
 calendar(month).each do put everything in list name and if its empty would be empty
+
+<div class="box">
+  <%= calendar @events do |event| %>
+    <%= link_to event.name, event %>
+    <div class="clear"></div>
+  <% end %>
+</div>
