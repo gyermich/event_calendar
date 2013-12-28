@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :set_event, only:[:show, :edit, :destroy, :show]
+  before_action :set_event, only:[:show, :edit, :destroy, :new]
 
   def new
     @event = Event.new
