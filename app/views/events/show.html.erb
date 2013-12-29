@@ -1,16 +1,24 @@
-<%= @event.name %></br>
-<%= @event.url %></br>
-<%= @event.date %></br>
-<% user = User.find_by_id(@event.user_id) %>
-By <%= "#{user.name}"%>:
 
-<% if EventsUser.find_by(user_id: current_user.id, event_id:@event.id) %> 
-  <%= button_to "Not going", not_going_path(@event), method: :delete %>
-<% else %>
-  <%= button_to "Join", join_path(@event) %>
-<% end %>
+<div id="side">
+  <div id="guests">
+    <h3>Going:</h3>
+    <% @event.users.each do |user| %>
+      <%= "#{user.name}" %></br>
+    <% end%>
+  </div>
+</div>
 
-Going:
-<% @event.users.each do |user| %>
-  <%= "#{user.name}" %>
-  <% end%>
+<div id="content">
+  <div id="event_description">
+    <h2><%= @event.name %></h2>
+    Added by <%= "#{User.find_by_id(@event.user_id).name}"%>:</br>
+    Description: <%= @event.url %></br>
+    When:<%= @event.date.strftime(" %B %d at %I:%M %p") %></br>
+
+    <% if EventsUser.find_by(user_id: current_user.id, event_id:@event.id) %> 
+      <%= button_to "Not going", not_going_path(@event), method: :delete %>
+    <% else %>
+      <%= button_to "Join", join_path(@event) %>
+    <% end %>
+  </div>
+</div>
