@@ -8,6 +8,10 @@ Calendar::Application.routes.draw do
   resources :sessions
   resources :users
   resources :events
+  resources :events_users
+
+  post '/events/:id/join' => "events#join", as: :join
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

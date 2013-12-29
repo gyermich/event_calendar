@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
-  before_action :set_event, only:[:show, :edit, :destroy]
-  before_filter :authorize, only:[:new, :create]
+  before_action :set_event, only:[:show, :edit, :destroy, :join]
+  before_filter :authorize, only:[:new, :create, :join]
 
   def new
     @event = Event.new
@@ -31,6 +31,11 @@ class EventsController < ApplicationController
 
   def calendar_view
     @events = Event.all
+  end
+
+  def join
+    @events_user = EventsUser.create(:event_id => @event.id,:user_id => session[:user_id])
+    redirect_to event_path(@event)
   end
 
   private
