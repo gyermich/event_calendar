@@ -11,32 +11,6 @@
  *= require_self
  *= require_tree .
  */
-/*html {
-   font-size: 62.5%; }
-body {
-   font: 1.2em/1.3 Arial, Helvetica, sans-serif;
-   background-color: #cef;
-   padding: 2em 0 0 2em; }
-h1 {
-   font-size: 2.5em;
-   margin: 0; }
-.calendar {
-  width:70%;
-   margin: 0;
-   padding: 0;
-   border: 2px solid #333;
-   background-color: #ddd; }
-.calendar td {
-   font-weight: bold;
-   width: 88px;
-   height: 88px;
-   border: 1px solid #999;
-   background-color: #fff; 
-   padding: 5px;
-   overflow: hidden;
-   vertical-align:top; 
- }*/
-
 body {
   font: normal 24px/40px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
   color: #616B76;
