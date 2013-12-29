@@ -11,7 +11,7 @@ Calendar::Application.routes.draw do
   resources :events_users
 
   post '/events/:id/join' => "events#join", as: :join
-
+  delete '/events/:id/not_going' => "events#not_going", as: :not_going
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

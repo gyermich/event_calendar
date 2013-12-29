@@ -3,7 +3,13 @@
 <%= @event.date %></br>
 <% user = User.find_by_id(@event.user_id) %>
 By <%= "#{user.name}"%>:
-<%= button_to "Join", join_path(@event) %>
+
+<% if EventsUser.find_by(user_id: current_user.id, event_id:@event.id) %> 
+  <%= button_to "Not going", not_going_path(@event), method: :delete %>
+<% else %>
+  <%= button_to "Join", join_path(@event) %>
+<% end %>
+
 Going:
 <% @event.users.each do |user| %>
   <%= "#{user.name}" %>
