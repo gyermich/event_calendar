@@ -12,7 +12,8 @@
  *= require_tree .
  */
 body {
-  font: normal 24px/40px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+
+  font: normal 24px/40px 'Comfortaa', Helvetica, sans-serif;
   color: #616B76;
 }
 
@@ -20,27 +21,18 @@ a {
   color: #DF9496;
 }
 
-.box {
-  width:80%;
-}
-
-.calendar {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  border-left: 1px solid #A2ADBC;
-  font: normal 18px/30px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-  color: #616B76;
-  background-color: #fff;
-}
-
-
 h2 {
   text-align:center;
+  font-weight: bold;
 }
 
+span {
+  color: #DF9496;
+}
+
+/*Calendar*/
 th {
-  font: bold 18px/30px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  font: bold 18px/30px;
   color: #616B76;
   background: #D9E2E1;
   border-right: 1px solid #A2ADBC;
@@ -48,19 +40,22 @@ th {
   border-top: 1px solid #A2ADBC;
 }
 
-.today, td.today a, td.today a:link, td.today a:visited {
+.today, td.today.wday-0, td.today.wday-6, td.today a, td.today a:link, td.today a:visited {
   color: #F6F4DA;
   font-weight: bold;
   background: #DF9496;
 }
 
+td.wday-0, td.wday-6 {
+  background: #F6F4DB;
+}
+
 td {
   border-right: 1px solid #A2ADBC;
   border-bottom: 1px solid #A2ADBC;
-  width: 94px;
-  height: 94px;
+  width: 120px;
+  height: 120px;
   vertical-align: top;
-  
 }
 
 td a {
@@ -73,6 +68,56 @@ td a:link, td a:visited {
   color: #608194;
 }
 
-td a:hover, td a:active {
+td a:hover {
   color: #6aa3ae;
+}
+
+a.next-month, a.previous-month {
+  padding: 0px 5px;
+}
+
+/*Navigation Menu*/
+#nav {
+  display:block;
+  height: 40px;
+  background:#A1ADBB;
+  color:#F4F3EE;
+  padding: 5px 20px 5px 20px;
+  border-top: 5px solid #DF9496;
+}
+
+#nav a {
+  color:#F6F4DB;
+  text-decoration: none;
+}
+
+#nav a:hover {
+  color: #727B84;
+  border-bottom: 3px solid #727B84;
+}
+
+#nav_bar {
+  float:left;
+}
+
+#user_header {
+  font-size: 15px;
+  float:right;
+  display: inline-block;
+}
+
+/*Content*/
+.container {
+  width:80%;
+  margin: 0 auto;
+}
+
+.calendar {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-left: 1px solid #A2ADBC;
+  font: normal 15px/20px 'Comfortaa';
+  color: #616B76;
+  background-color: #fff;
 }
