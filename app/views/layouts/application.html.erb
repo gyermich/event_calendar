@@ -12,7 +12,7 @@
   <div id="nav">
     <div id="user_header">
       <% if current_user %>
-      <%= link_to "Name's account" %> |
+      <%= link_to "#{current_user.name}'s account", user_path(current_user) %> |
       <%= link_to "Log out", logout_path %>
       <% else %>
       <%= link_to "Sign Up", signup_path %> |
