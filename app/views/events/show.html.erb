@@ -15,10 +15,24 @@
     Description: <%= @event.url %></br>
     When:<%= @event.date.strftime(" %B %d at %I:%M %p") %></br>
 
+    <table id="button_table">
     <% if EventsUser.find_by(user_id: current_user.id, event_id:@event.id) %> 
-      <%= button_to "Not going", not_going_path(@event), method: :delete %>
-    <% else %>
-      <%= button_to "Join", join_path(@event) %>
+      <tr>
+        <td>Can't make it?</td>
+        <td>
+          <div class="button">
+            <%= button_to "Leave", not_going_path(@event), method: :delete %>
+          </div>
+        </td>
+        <% else %>
+        <td>Are you going?</td>
+        <td>
+          <div class="button">
+            <%= button_to "Join", join_path(@event) %>
+          </div>
+        </td>
+      </tr>
+    </table>
     <% end %>
   </div>
 </div>

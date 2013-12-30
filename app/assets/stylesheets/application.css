@@ -30,6 +30,15 @@ span {
 }
 
 /*Calendar*/
+.box {
+  width: 80%;
+  margin:auto;
+}
+
+.box h2 {
+  text-align: center;
+}
+
 th {
   font: bold 18px/30px;
   color: #616B76;
@@ -49,7 +58,7 @@ td.wday-0, td.wday-6 {
   background: #F6F4DB;
 }
 
-td {
+.calendar td {
   border-right: 1px solid #A2ADBC;
   border-bottom: 1px solid #A2ADBC;
   width: 120px;
@@ -159,3 +168,20 @@ a.next-month, a.previous-month {
   padding: 0px 20px;
 }
 
+.button {
+  margin: 0px;
+  padding-bottom:5px;
+}
+.button input {
+  background: #DF9496;
+  color: #F6F4DA;
+  border-radius:5px;
+  width:70px;
+  height:30px;
+  font-size: 15px;
+  border:none;
+}
+ 
+#button_table td {
+  padding:5px;
+}
