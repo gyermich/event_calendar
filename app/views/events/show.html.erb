@@ -2,8 +2,12 @@
 <div id="side">
   <div id="guests">
     <h3>Going:</h3>
-    <% @event.users.each do |user| %>
-      <%= "#{user.name}" %></br>
+    <% if @event.users.empty? %>
+      <em>No one joined yet</em>
+    <% else %>
+      <% @event.users.each do |user| %>
+        <%= "#{user.name}" %></br>
+      <% end%>
     <% end%>
   </div>
 </div>
@@ -16,7 +20,7 @@
     When:<%= @event.date.strftime(" %B %d at %I:%M %p") %></br>
 
     <table id="button_table">
-    <% if EventsUser.find_by(user_id: current_user.id, event_id:@event.id) %> 
+    <% if current_user && EventsUser.find_by(user_id: current_user.id, event_id:@event.id) %> 
       <tr>
         <td>Can't make it?</td>
         <td>
@@ -32,7 +36,11 @@
           </div>
         </td>
       </tr>
+      <% end %>
     </table>
-    <% end %>
+    <hr>
+    <%= render 'comments' %>
   </div>
+   
 </div>
+  

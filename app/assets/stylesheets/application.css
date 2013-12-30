@@ -146,10 +146,10 @@ a.next-month, a.previous-month {
 /*Event Page*/
 #side{
   background-color:#D9E2E1;
-  width:200px;
+  width:220px;
   vertical-align:top;
   text-align:right;
-  padding: 5px 20px;
+  padding: 5px 20px 5px 2px;
   display: table-cell;
 }
 

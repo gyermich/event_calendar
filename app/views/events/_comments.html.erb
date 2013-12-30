@@ -1,0 +1,34 @@
+  <% if current_user %>
+  <p>
+    <a href="#comment_form" onclick="toggle_visibility('comment_form');">Write a Comment</a>
+  </p>
+
+  <div id="comment_form" style="display:none">
+    <%= form_for([@event, Comment.new]) do |f| %>
+      <p>
+        <div class="field">
+            <%= f.hidden_field :user_id, :value => current_user.id %> 
+        </div> 
+      </p>
+      <p>
+        <div class="field">
+          <%= f.text_area :body %>
+        </div>
+      </p>
+      <p>
+        <div class="button">
+          <%= f.submit "Submit" %>
+        </div>
+      </p>
+    <% end %>
+  </div>
+<% end %>
+
+
+  <% @event.comments.each do |comment| %>
+    <div class="comment">
+      <%= time_ago_in_words(comment.created_at) %> ago, by <strong><%= "#{User.find(comment.user_id).name}" %>:</strong> </br>
+      <%= comment.body %> </br>
+    </div>
+    <hr>
+  <% end %>
