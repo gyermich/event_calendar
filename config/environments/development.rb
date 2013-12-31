@@ -14,7 +14,18 @@ Calendar::Application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :user_name => 'test-357b078fa5bc0e1f',
+    :password => '745fcc9b651d128b',
+    :address => 'mailtrap.io',
+    :port => '2525',
+    :authentication => :plain
+  }
+  
+  
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
