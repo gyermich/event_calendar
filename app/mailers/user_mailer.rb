@@ -11,8 +11,9 @@ class UserMailer < ActionMailer::Base
     mail to: user.email, subject: "Welcome to Ada Event Calendar!"
   end
 
-  def event_notification(user)
+  def event_notification(user, event)
     @user = user
-    mail to: user.email, subject: "Welcome to Ada Event Calendar!"
+    @event = event
+    mail to: user.email, subject: "Check Out This New Ada Event!"
   end
 end

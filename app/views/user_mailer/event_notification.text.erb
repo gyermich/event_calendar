@@ -1,3 +1,5 @@
-UserMailer#event_notification
+Hi <%= @user.name %>!
+=====================
 
-<%= @greeting %>, find me in app/views/app/views/user_mailer/event_notification.text.erb
+The new event <%= @event.name %> has just been added to Ada Event Calendar!
+Check it out:<%= url_for event_url(@event) %>
