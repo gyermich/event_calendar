@@ -14,8 +14,9 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(event_params)
+    @event           = Event.new(event_params)
     @event[:user_id] = session[:user_id]
+    
     if @event.save
       User.all.each do |user|
         UserMailer.event_notification(user, @event).deliver

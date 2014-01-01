@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   def create
-    @event = Event.find_by_id(params[:event_id])
+    @event   = Event.find_by_id(params[:event_id])
     @comment = @event.comments.create(comment_params)
     redirect_to event_path(@event)
   end

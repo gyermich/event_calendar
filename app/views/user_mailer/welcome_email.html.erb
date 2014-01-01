@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html style="font: normal 24px/40px 'Comfortaa', Helvetica, sans-serif;color: #616B76;height: 100%;">
-<body style="font: normal 24px/40px 'Comfortaa', Helvetica, sans-serif;color: #616B76;height: 100%;">
-  <div class="wrapper" style="height: 100%;padding-bottom: 40px;">
-    <div id="header" style="display: block;height: 40px;background: #A1ADBB;color: #F4F3EE;padding: 5px 20px 5px 20px;border-top: 5px solid #DF9496;">
-     
+  <body style="font: normal 24px/40px 'Comfortaa', Helvetica, sans-serif;color: #616B76;height: 100%;">
+    <div class="wrapper" style="height: 100%;padding-bottom: 40px;">
+      <div id="header" style="display: block;height: 40px;background: #A1ADBB;color: #F4F3EE;padding: 5px 20px 5px 20px;border-top: 5px solid #DF9496;">
+       
+      </div>
+      <div class="box" style="width: 80%;margin: auto;">
+        <h1>Hi <%= @user.name %>!</h1>
+        <p> You have successfully signed up to Ada Event Calendar!</p>
+        <p> <%= link_to "Head on in!", root_url %></p>
+      </div>
     </div>
-    <div class="box" style="width: 80%;margin: auto;">
-      <h1>Hi <%= @user.name %>!</h1>
-      <p> You have successfully signed up to Ada Event Calendar!</p>
-      <p> <%= link_to "Head on in!", root_url %></p>
-    </div>
-  </div>
-</body>
+  </body>
 </html>
