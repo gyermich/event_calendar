@@ -27,7 +27,9 @@
 
   <% @event.comments.each do |comment| %>
     <div class="comment">
-      <%= time_ago_in_words(comment.created_at) %> ago, by <strong><%= "#{User.find(comment.user_id).name}" %>:</strong> </br>
+      <div id="small">
+        <%= time_ago_in_words(comment.created_at) %> ago, by <strong><%= "#{User.find(comment.user_id).name}" %>:</strong> </br>
+      </div>
       <%= comment.body %> </br>
     </div>
     <hr>

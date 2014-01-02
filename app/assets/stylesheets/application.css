@@ -12,17 +12,21 @@
  *= require_tree .
  */
 body, html {
-  font: normal 24px/40px 'Comfortaa', Helvetica, sans-serif;
-  color: #616B76;
-  height :100%;
+  font  : normal 24px/40px 'Comfortaa', Helvetica, sans-serif;
+  color : #616B76;
+  height: 100%;
 }
 
 a {
   color: #DF9496;
 }
 
+h1{
+  text-align: center;
+}
+
 h2, h3 {
-  font-family:'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 span {
@@ -31,8 +35,8 @@ span {
 
 /*Calendar*/
 .box {
-  width: 80%;
-  margin:auto;
+  width : 80%;
+  margin: auto;
 }
 
 .box h2 {
@@ -40,18 +44,18 @@ span {
 }
 
 th {
-  font: bold 18px/30px;
-  color: #616B76;
-  background: #D9E2E1;
-  border-right: 1px solid #A2ADBC;
+  font         : bold 18px/30px;
+  color        : #616B76;
+  background   : #D9E2E1;
+  border-right : 1px solid #A2ADBC;
   border-bottom: 1px solid #A2ADBC;
-  border-top: 1px solid #A2ADBC;
+  border-top   : 1px solid #A2ADBC;
 }
 
 .today, td.today.wday-0, td.today.wday-6, td.today a, td.today a:link, td.today a:visited {
-  color: #F6F4DA;
+  color      : #F6F4DA;
   font-weight: bold;
-  background: #DF9496;
+  background : #DF9496;
 }
 
 td.wday-0, td.wday-6 {
@@ -59,17 +63,17 @@ td.wday-0, td.wday-6 {
 }
 
 .calendar td {
-  border-right: 1px solid #A2ADBC;
-  border-bottom: 1px solid #A2ADBC;
-  width: 120px;
-  height: 120px;
+  border-right  : 1px solid #A2ADBC;
+  border-bottom : 1px solid #A2ADBC;
+  width         : 120px;
+  height        : 120px;
   vertical-align: top;
 }
 
 td a {
   text-decoration: none;
-  font-weight: bold;
-  display: block;
+  font-weight    : bold;
+  display        : block;
 }
 
 td a:link, td a:visited { 
@@ -85,103 +89,131 @@ a.next-month, a.previous-month {
 }
 
 .wrapper {
-  height: 100%;
+  height        : 100%;
   padding-bottom: 40px;
 }
 
 /*Navigation Menu*/
 #header {
-  display:block;
-  height: 40px;
-  background:#A1ADBB;
-  color:#F4F3EE;
-  padding: 5px 20px 5px 20px;
+  display   : block;
+  height    : 40px;
+  background: #A1ADBB;
+  color     : #F4F3EE;
+  padding   : 5px 20px 5px 20px;
   border-top: 5px solid #DF9496;
 }
 
 #header a {
-  color:#F6F4DB;
+  color          :#F6F4DB;
   text-decoration: none;
 }
 
 #header a:hover {
-  color: #727B84;
+  color        : #727B84;
   border-bottom: 3px solid #727B84;
 }
 
 #nav_bar {
-  float:left;
+  float: left;
 }
 
 #user_header {
   font-size: 15px;
-  float:right;
-  display: inline-block;
+  float    : right;
+  display  : inline-block;
 }
 
 /*Content*/
 .main {
-  position: relative;
-  width:100%;
-  height:100%;
-  overflow: auto;
-  display:table;
+  position    : relative;
+  width       : 100%;
+  height      : 100%;
+  overflow    : auto;
+  display     : table;
   table-layout: fixed;
 }
 
 .calendar {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  border-left: 1px solid #A2ADBC;
-  font: normal 15px/20px 'Comfortaa';
-  color: #616B76;
+  width           : 100%;
+  padding         : 0;
+  margin          : 0;
+  border-left     : 1px solid #A2ADBC;
+  font            : normal 15px/20px 'Comfortaa';
+  color           : #616B76;
   background-color: #fff;
 }
 
 .container h2 {
-  text-align:center;
+  text-align: center;
 }
 
 /*Event Page*/
-#side{
-  background-color:#D9E2E1;
-  width:220px;
-  vertical-align:top;
-  text-align:right;
-  padding: 5px 20px 5px 2px;
-  display: table-cell;
+#side {
+  background-color: #D9E2E1;
+  width           : 220px;
+  vertical-align  : top;
+  text-align      : right;
+  padding         : 5px 20px 5px 2px;
+  display         : table-cell;
 }
 
 #guests {
-  display:block;
+  display: block;
 }
 
 #content {
-  padding:20 px;
+  padding: 20 px;
   display: table-cell;
 }
 
-#event_description {
-  width: auto;
-  height: auto;
+#eventdescription {
+  width  : auto;
+  height : auto;
   padding: 0px 20px;
 }
 
+#small {
+  font : normal 15px/20px 'Comfortaa';
+  color: #6AA3AE;
+  height: 20px;
+}
+
+#descr {
+ /* font : normal 20px/22px 'Comfortaa';*/
+  color:#A1ADBB;
+}
+
 .button {
-  margin: 0px;
-  padding-bottom:5px;
+  margin        : 0px;
+  padding-bottom: 5px;
 }
 .button input {
-  background: #DF9496;
-  color: #F6F4DA;
-  border-radius:5px;
-  width:70px;
-  height:30px;
-  font-size: 15px;
-  border:none;
+  background   : #DF9496;
+  color        : #F6F4DA;
+  border-radius: 5px;
+  min-width    : 70px;
+  height       : 30px;
+  font-size    : 15px;
+  border       : none;
 }
  
 #button_table td {
-  padding:5px;
+  padding: 5px;
 }
+
+/*Forms*/
+.form_style form {
+  width                : 250px;
+  padding              : 20px;
+  border               : 1px solid #270644;
+  margin               : auto;
+  -moz-border-radius   : 20px;
+  -webkit-border-radius: 20px;
+  background           :  #D9E2E1;
+}
+
+.form_style form .button {
+  margin        : 0px;
+  padding-bottom: 5px;
+}
+

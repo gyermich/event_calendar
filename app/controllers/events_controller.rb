@@ -1,12 +1,15 @@
 class EventsController < ApplicationController
-  before_action :set_event, only:[:show, :edit, :destroy, :join, :not_going]
-  before_filter :authorize, only:[:new, :create, :join]
+  before_action :set_event, only:[:show, :edit, :destroy, :join, :not_going, :update]
+  before_filter :authorize, only:[:new, :create, :join, :edit, :destroy]
 
   def new
     @event = Event.new
   end
 
   def show
+  end
+
+  def edit
   end
 
   def index
@@ -27,7 +30,12 @@ class EventsController < ApplicationController
     end
   end
 
-  def edit
+  def update
+    if @event.update(event_params)
+      redirect_to event_path(@event)
+    else
+      render :edit
+    end
   end
 
   def destroy
@@ -54,6 +62,6 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:name, :url, :date)
+    params.require(:event).permit(:name, :description, :date)
   end
 end
