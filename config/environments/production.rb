@@ -41,7 +41,7 @@ Calendar::Application.configure do
 #     :password => ENV['SENDGRID_PASSWORD'],
 #     :domain => ‘heroku.com’
 # }
-config.action_mailer.default_url_options = { :host => 'ada-calendar.herokuapp.com', :protocol => 'https'}
+config.action_mailer.default_url_options = { :host => 'ada-calendar.herokuapp.com'}
   # Disable Rails's static asset server (Apache or nginx will already do this).
   config.serve_static_assets = false
 
