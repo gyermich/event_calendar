@@ -1,1 +1,82 @@
-<%= @user.inspect %>
+<div id="w">
+  <div id="content">
+    
+    <h1><%= @user.name %>'s account</h1>
+ 
+    <nav id="profiletabs">
+      <ul>
+        <li><a href="#my_info" class="sel">My Info</a></li>
+        <li><a href="#created_events">Events Created</a></li>
+        <li><a href="#my_events">Events Attending</a></li>
+      </ul>
+    </nav>
+     
+    <section id="my_info">
+      <div class="user_account">
+
+        <table>
+          <tr>
+            <td><strong>My Name:</strong></td>
+            <td><%= @user.name %></td>
+          </tr>
+          <tr>
+            <td><strong>My Email:</strong></td>
+            <td><%= @user.email %></td>
+          </tr>
+        </table>
+            
+      </div>
+    </section>
+     
+    <section id="created_events" class="hidden">
+      <div class="user_account">
+
+        <table> 
+          <% Event.where(:user_id => current_user.id).order("date desc").each do |event| %>
+          <tr>
+            <td>
+              <%=link_to image_tag("edit.png", :size => "25x25", :title => "edit event"), edit_event_path(event) %>
+            </td>
+            <td>
+              <%=link_to image_tag("delete.png", :size => "25x25", :title => "delete event"), 
+                    event, method: :delete, data: {confirm: 'Are you sure?'} %>
+            </td>
+            <td>
+              <%= link_to event.name, event_path(event) %>
+              <span id="small"><%= event.date.strftime(" %B %d at %I:%M %p") %></span>
+            </td>
+            <td id="small">
+              <%= event.comments.count %> comments |
+              <%= event.users.count %> guests 
+            </td> 
+          </tr>
+          <% end %>
+        </table>
+
+      </div>
+    </section>
+
+    <section id="my_events" class="hidden">
+      <div class="user_account">
+
+        <table> 
+           <% Event.all.order("date desc").each do |event| %>
+            <% event.events_users.where(:user_id => @user.id).each do |event_user| %>
+              <tr>
+                <td>
+                  <%= link_to event_user.event.name, event_path(event) %>
+                  <span id="small"><%= event.date.strftime(" %B %d at %I:%M %p") %></span>
+                </td>
+                <td id="small">
+                  <%= event_user.event.comments.count %> comments |
+                  <%= event_user.event.users.count %> guests 
+                </td> 
+              </tr>
+            <% end %>
+          <% end %>
+         </table>
+      
+      </div>
+    </section>
+  </div>
+</div>

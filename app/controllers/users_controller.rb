@@ -9,6 +9,9 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def edit
+  end
+
   def create
     @user = User.new(user_params)
     
@@ -18,6 +21,14 @@ class UsersController < ApplicationController
       redirect_to user_path(@user), notice: "Thank you for signing up!"
     else
       render :new
+    end
+
+    def update
+      if @user.update(user_params)
+        redirect_to user_path(@user)
+      else
+        render :edit
+      end
     end
   end
 

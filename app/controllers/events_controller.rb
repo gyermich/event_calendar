@@ -39,6 +39,10 @@ class EventsController < ApplicationController
   end
 
   def destroy
+    @event.destroy
+    respond_to do |format|
+      format.html { redirect_to root_url }
+    end
   end
 
   def calendar_view

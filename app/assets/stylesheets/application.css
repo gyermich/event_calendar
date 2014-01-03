@@ -12,13 +12,20 @@
  *= require_tree .
  */
 body, html {
-  font  : normal 24px/40px 'Comfortaa', Helvetica, sans-serif;
-  color : #616B76;
   height: 100%;
+}
+
+body{
+  font  : normal 22px/30px 'Comfortaa', Helvetica, sans-serif;
+  color : #616B76;
 }
 
 a {
   color: #DF9496;
+  text-decoration: none;
+}
+a:hover {
+  color: #6aa3ae;
 }
 
 h1{
@@ -27,10 +34,6 @@ h1{
 
 h2, h3 {
   font-family: 'Montserrat', sans-serif;
-}
-
-span {
-  color: #DF9496;
 }
 
 /*Calendar*/
@@ -172,15 +175,13 @@ a.next-month, a.previous-month {
   padding: 0px 20px;
 }
 
-#small {
+#small, #small a {
   font : normal 15px/20px 'Comfortaa';
-  color: #6AA3AE;
   height: 20px;
 }
 
 #descr {
- /* font : normal 20px/22px 'Comfortaa';*/
-  color:#A1ADBB;
+  color:#616B76;
 }
 
 .button {
@@ -216,4 +217,135 @@ a.next-month, a.previous-month {
   margin        : 0px;
   padding-bottom: 5px;
 }
+
+/*Comments*/
+.comment {
+  overflow     : hidden;
+  padding      : 20px ;
+  border-bottom: 1px solid #ddd;
+  margin       : 0 0 1em;
+  *zoom        : 1;
+}
+
+#comment_name {
+  float        : left;
+  font         : normal 15px/20px 'Comfortaa';
+  float        : left;
+  margin-right : 10px;
+  border-radius: 5px;
+  overflow     : hidden;
+}
+
+#comment_body {
+  overflow     : hidden;
+  padding      : 10px;
+  border       : 1px solid #e5e5e5;
+  border-radius: 5px;
+  background   : #EEF4DB;/
+}
+
+/*User Account Page*/
+.user_account {
+  padding      : 30px;
+  margin       : 0 auto;
+  border-bottom: 1px solid #df9496;
+}
+
+#w {
+  display       : block;
+  width         : 90%;
+  margin        : 0 auto;
+  padding-bottom: 45px;
+  height        : 100%;
+}
+ 
+#content {
+  display           : block;
+  background        : #fff;
+  padding           : 25px 20px;
+  padding-bottom    : 35px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  -moz-box-shadow   : rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  box-shadow        : rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  min-height        :100%;
+}
+ 
+ 
+/*User Account nav links */
+#profiletabs {
+  display      : block;
+  margin: auto;
+}
+ 
+#profiletabs ul { list-style: none; display:block; width:800px; height: 50px;  margin: 0 auto;}
+#profiletabls ul li { float: left; }
+#profiletabs ul li a { 
+  display                          : block;
+  float                            : left;
+  padding                          : 8px 11px;
+  font-size                        : 1.2em;
+  font-weight                      : bold;
+  background                       : #D9E2E1;
+  color                            : #616B76;
+  margin-right                     : 7px;
+  border                           : 1px solid #fff;
+  -webkit-border-radius            : 5px;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius               : 5px;
+  -moz-border-radius-bottomleft    : 0;
+  border-radius                    : 5px;
+  border-bottom-left-radius        : 0;
+  width                            :235px;
+  text-align                       : center;
+}
+#profiletabs ul li a:hover {
+  text-decoration: none;
+  background     : #EEF4DB;
+  color          : #616B76;
+}
+ 
+#profiletabs ul li a.sel {
+  background  : #EEF4DB;
+  color       : #616B76;
+  border-color: #d1cdb5;
+}
+
+.hidden {
+  display: none;
+}
+ 
+/*User Account Table*/
+.user_account table {
+  margin: 0 auto;
+}
+
+.user_account table td {
+  border-bottom : 1px solid #A2ADBC;
+  vertical-align: top;
+  padding       : 3px;
+  height        : 25px;
+
+}
+
+.user_account table tr:last-child td {
+  border-bottom:none;
+}
+
+.user_account td a {
+  line-height    : 20px;
+  text-decoration: none;
+  font-weight    : bold;
+  display        : block;
+}
+
+.user_account td a:link, .user_account td a:visited { 
+  color: #608194;
+}
+
+.user_account td a:hover {
+  color: #6aa3ae;
+}
+
+
+ 
 

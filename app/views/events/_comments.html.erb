@@ -1,6 +1,7 @@
-  <% if current_user %>
+<% if current_user %>
   <p>
-    <a href ="#comment_form" onclick="toggle_visibility('comment_form');">Write a Comment</a>
+    <a href="#comment_form" onclick="toggle_visibility('comment_form');">Write a Comment</a>
+    <%= image_tag("comment4.png", :height => "35") %>
   </p>
 
   <div id="comment_form" style="display:none">
@@ -22,15 +23,20 @@
       </p>
     <% end %>
   </div>
+<% else %>  
+      <p><%= link_to "Log in to comment", login_path %></p>
 <% end %>
 
 
   <% @event.comments.each do |comment| %>
     <div class="comment">
-      <div id="small">
-        <%= time_ago_in_words(comment.created_at) %> ago, by <strong><%= "#{User.find(comment.user_id).name}" %>:</strong> </br>
+      <div id="comment_name">
+       <strong><%= "#{User.find(comment.user_id).name}" %></strong> said</br>
+       <%= time_ago_in_words(comment.created_at) %> ago:  </br>
       </div>
-      <%= comment.body %> </br>
+      <div id="comment_body">
+      <p><%= comment.body %> </p>
     </div>
-    <hr>
+    </div>
+   
   <% end %>
