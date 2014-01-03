@@ -32,15 +32,15 @@ Calendar::Application.configure do
   # authentication:       'plain',
   # enable_starttls_auto: true  }
 
-  ActionMailer::Base.delivery_method = :smtp
-  ActionMailer::Base.smtp_settings = {
-    :address => ‘smtp.sendgrid.net’,
-    :port => ’587′,
-    :authentication => :plain,
-    :user_name => ENV['SENDGRID_USERNAME'],
-    :password => ENV['SENDGRID_PASSWORD'],
-    :domain => ‘heroku.com’
-}
+#   ActionMailer::Base.delivery_method = :smtp
+#   ActionMailer::Base.smtp_settings = {
+#     :address => ‘smtp.sendgrid.net’,
+#     :port => ’587′,
+#     :authentication => :plain,
+#     :user_name => ENV['SENDGRID_USERNAME'],
+#     :password => ENV['SENDGRID_PASSWORD'],
+#     :domain => ‘heroku.com’
+# }
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
   config.serve_static_assets = false
