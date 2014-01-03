@@ -10,10 +10,10 @@ ActionMailer::Base.smtp_settings = {
   :authentication => :plain,
   :user_name      => ENV['SENDGRID_USERNAME'],
   :password       => ENV['SENDGRID_PASSWORD'],
-  :domain         => 'ada-calendar.heroku.com',
+  :domain         => 'ada-calendar.herokuapp.com',
   :enable_starttls_auto => true
 }
 
-config.action_mailer.default_url_options = { :host => 'ada-calendar.heroku.com'}
+config.action_mailer.default_url_options = { :host => 'ada-calendar.herokuapp.com', :protocol => 'https'}
 
 
