@@ -46,8 +46,8 @@
               <span id="small"><%= event.date.strftime(" %B %d at %I:%M %p") %></span>
             </td>
             <td id="small">
-              <%= event.comments.count %> comments |
-              <%= event.users.count %> guests 
+              <%= pluralize(event.comments.count, "comment") %> |
+              <%= event.users.count %> attending 
             </td> 
           </tr>
           <% end %>
@@ -68,8 +68,8 @@
                   <span id="small"><%= event.date.strftime(" %B %d at %I:%M %p") %></span>
                 </td>
                 <td id="small">
-                  <%= event_user.event.comments.count %> comments |
-                  <%= event_user.event.users.count %> guests 
+                  <%= pluralize(event_user.event.comments.count, "comment") %> |
+                  <%= event_user.event.users.count %> attending
                 </td> 
               </tr>
             <% end %>

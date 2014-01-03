@@ -346,6 +346,44 @@ a.next-month, a.previous-month {
   color: #6aa3ae;
 }
 
+/*Popup*/
+.popbox {
+    display: none;
+    position: absolute;
+    z-index: 99999;
+    width: 300px;
+    padding: 10px;
+    background: #D9E2E1;
+    color: #616B76;
+    border: 1px solid #A2ADBC;
+    -moz-border-radius   : 20px;
+  -webkit-border-radius: 20px;
+    margin: 0px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(164, 164, 164, 1);
+    box-shadow: 0px 0px 5px 0px rgba(164, 164, 164, 1);
+}
+.popbox h2
+{
+    background-color: #A1ADBB;
+    -moz-border-top-right-radius   : 20px;
+    -moz-border-top-left-radius   : 20px;
+  -webkit-border-top-right-radius: 20px;
+  -webkit-border-top-left-radius: 20px;
+    color:  #F6F4DB;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    margin: -10px 0px 8px -10px;
+    padding: 5px 10px;
+}
 
- 
+.popbox ul{
+  display:block;
+  text-decoration: none;
+  margin:0;
+}
+
+.popbox ul li{
+  display:inline;
+}
 

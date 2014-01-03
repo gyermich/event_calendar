@@ -1,5 +1,14 @@
 <div class="box">
   <%= calendar @events do |event| %>
-    <%= link_to event.name, event %></br>
+    <%= link_to event.name, event, :class =>"popper", :data_popbox => event.id %></br>
+    <div id="<%=event.id%>" class="popbox">
+      <h2><%= event.name %></h2>
+      <p><%= event.description %></p>
+      <ul>
+        <li><%= event.date.strftime("%I:%M%p")%> |</li>
+        <li><%= pluralize(event.comments.count, "comment") %> |</li>
+        <li><%= event.users.count %> attending</li>
+      </ul>
+    </div>
   <% end %>
 </div>
