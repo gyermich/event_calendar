@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
-  before_action :set_event, only:[:show, :edit, :destroy, :join, :not_going, :update]
-  before_filter :authorize, only:[:new, :create, :join, :edit, :destroy]
+  before_action :set_event, only: [:show, :edit, :destroy, :join, :not_going, :update]
+  before_filter :authorize, only: [:new, :create, :join, :edit, :destroy]
 
   def new
     @event = Event.new
@@ -19,7 +19,6 @@ class EventsController < ApplicationController
   def create
     @event           = Event.new(event_params)
     @event[:user_id] = session[:user_id]
-    
     if @event.save
       User.all.each do |user|
         UserMailer.event_notification(user, @event).deliver
@@ -50,17 +49,18 @@ class EventsController < ApplicationController
   end
 
   def join
-    @events_user = EventsUser.create(:event_id => @event.id,:user_id => session[:user_id])
+    @events_user = EventsUser.create(event_id: @event.id, user_id: session[:user_id])
     redirect_to event_path(@event)
   end
 
   def not_going
-    @events_user = EventsUser.find_by(user_id: current_user.id, event_id:@event.id)
+    @events_user = EventsUser.find_by(user_id: current_user.id, event_id: @event.id)
     @events_user.destroy
     redirect_to event_path(@event)
   end
 
   private
+  
   def set_event
     @event = Event.find(params[:id])
   end

@@ -1,5 +1,4 @@
 class EventsUsersController < ApplicationController
-
   before_action :set_events_user, only: [:show, :edit, :update, :destroy]
 
   def new
@@ -10,8 +9,8 @@ class EventsUsersController < ApplicationController
 
   private
 
-   def events_user_params
-     params.require(:events_user).permit(:user_id, :event_id)
+  def events_user_params
+    params.require(:events_user).permit(:user_id, :event_id)
   end
 
   def set_events_user
