@@ -184,6 +184,10 @@ a.next-month, a.previous-month {
   color:#616B76;
 }
 
+#simple_format td{
+  vertical-align: top;
+}
+
 .button {
   margin        : 0px;
   padding-bottom: 5px;
