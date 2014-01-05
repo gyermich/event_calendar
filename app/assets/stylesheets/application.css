@@ -181,11 +181,22 @@ a.next-month, a.previous-month {
 }
 
 #descr {
-  color:#616B76;
+  color: #616B76;
 }
 
 #simple_format td{
   vertical-align: top;
+  padding-right : 3px;
+}
+
+#simple_format td a {
+  color          : #DF9496;
+  text-decoration: none;
+  font-weight    : normal
+}
+
+#simple_format td a:hover {
+  color: #6aa3ae;
 }
 
 .button {
