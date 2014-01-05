@@ -8,6 +8,12 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+group :development, :test do
+  gem 'debugger'
+  gem 'rspec-rails'
+  gem 'guard-rspec', require: false
+end
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'
