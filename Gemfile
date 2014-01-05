@@ -12,6 +12,7 @@ group :development, :test do
   gem 'debugger'
   gem 'rspec-rails'
   gem 'guard-rspec', require: false
+  gem 'simplecov', require: false
 end
 
 group :production do
