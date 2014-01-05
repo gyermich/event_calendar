@@ -1,0 +1,1 @@
+The Event Calendar for Ada Developers Academy: keep track of Networking and Group events, get notified about new events in the community, create your own events all in one place: https://ada-calendar.herokuapp.com/
