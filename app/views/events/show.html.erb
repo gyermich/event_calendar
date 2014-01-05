@@ -31,7 +31,7 @@
     <p><strong>When:</strong>
     <span id="descr"><%= @event.date.strftime(" %B %d at %I:%M %p") %></span></p>
     <p><strong>Details:</strong>
-    <span id="descr"><%= @event.description.gsub(URI.regexp, '<a href="\0">\0</a>').html_safe %></span></p>
+    <span id="descr"><%= simple_format(@event.description.gsub(URI.regexp, '<a href="\0">\0</a>')).html_safe %></span></p>
 
     <table id="button_table">
     <% if current_user && EventsUser.find_by(user_id: current_user.id, event_id:@event.id) %> 
