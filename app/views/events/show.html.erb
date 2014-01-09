@@ -1,14 +1,18 @@
 
 <div id="side">
   <div id="guests">
-    <h3>Who's going:</h3>
-    <% if @event.users.empty? %>
-      <em>No one joined yet</em>
-    <% else %>
-      <% @event.users.each do |user| %>
-        <%= "#{user.name}" %></br>
+    <% if current_user %>
+     <h3>Who's going:</h3>
+      <% if @event.users.empty? %>
+        <em>No one joined yet</em>
+      <% else %>
+        <% @event.users.each do |user| %>
+          <%= "#{user.name}" %></br>
+        <% end%>
       <% end%>
-    <% end%>
+    <% else %>
+      <p><%= link_to "Log in to see who's going", login_path, id: "small" %></p>
+    <% end %>
   </div>
 </div>
 
