@@ -13,6 +13,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'guard-rspec', require: false
   gem 'simplecov', require: false
+  gem 'better_errors'
+   gem 'binding_of_caller'
 end
 
 group :production do
@@ -43,6 +45,8 @@ gem 'jbuilder', '~> 1.2'
 gem "simple_calendar"
 
 gem "mail"
+
+gem 'useragent'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

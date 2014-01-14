@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140105041053) do
+ActiveRecord::Schema.define(version: 20140113235848) do
 
   create_table "comments", force: true do |t|
     t.text     "body"
@@ -43,6 +43,19 @@ ActiveRecord::Schema.define(version: 20140105041053) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+  end
+
+  create_table "visitors", force: true do |t|
+    t.string   "ip_address"
+    t.integer  "pageviews"
+    t.text     "referrer"
+    t.integer  "numberofvisits"
+    t.string   "device"
+    t.string   "browser"
+    t.string   "browserversion"
+    t.boolean  "mobile"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

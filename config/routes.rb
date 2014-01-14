@@ -1,6 +1,8 @@
 Calendar::Application.routes.draw do
 
  
+  resources :visitors
+
   get "log_in"  => "sessions#new",     :as => "login"
   get "log_out" => "sessions#destroy", :as => "logout"
   get "sign_up" => "users#new",        :as => "signup"
