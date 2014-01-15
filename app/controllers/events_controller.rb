@@ -1,6 +1,8 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :destroy, :join, :not_going, :update]
   before_filter :authorize, only: [:new, :create, :join, :edit, :destroy]
+   before_action :update_pageviews_count, only: [:index, :new, :edit]
+   helper_method :current_visitor
 
   def new
     @event = Event.new
@@ -13,7 +15,6 @@ class EventsController < ApplicationController
   end
 
   def index
-    raise
     @events = Event.all
   end
 
@@ -68,5 +69,9 @@ class EventsController < ApplicationController
 
   def event_params
     params.require(:event).permit(:name, :description, :date)
+  end
+
+   def update_visit_count
+    current_visitor.update(pageviews: current_visitor.pageviews + 1)
   end
 end

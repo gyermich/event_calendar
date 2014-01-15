@@ -46,7 +46,7 @@ gem "simple_calendar"
 
 gem "mail"
 
-gem 'useragent'
+gem 'agent_orange'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
