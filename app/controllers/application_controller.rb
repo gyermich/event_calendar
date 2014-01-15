@@ -26,7 +26,7 @@ class ApplicationController < ActionController::Base
       end
 
       if Time.now - Time.new(cookies[:last_visit]) > 1.hour
-        # @current_visitor.update(numberofvisits: @current_visitor.numberofvisits + 1)
+        @current_visitor.update(numberofvisits: @current_visitor.numberofvisits + 1)
       end
 
       cookies[:last_visit] = Time.now
@@ -47,7 +47,7 @@ class ApplicationController < ActionController::Base
     result[:browserversion] = parser.device.engine.browser.version.to_s
     result[:ip_address] = request.remote_ip.to_s
     result[:referrer] = request.referrer.to_s
-    # result[:numberofvisits] = 1
+ 
 
     result
   end
