@@ -70,8 +70,4 @@ class EventsController < ApplicationController
   def event_params
     params.require(:event).permit(:name, :description, :date)
   end
-
-   def update_visit_count
-    current_visitor.update(pageviews: current_visitor.pageviews + 1)
-  end
 end
