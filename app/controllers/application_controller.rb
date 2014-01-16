@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
         cookies[:last_visit] = Time.now
       end
 
-      if Time.now - Time.parse(cookies[:last_visit]) > 1.hour
+      if Time.now - cookies[:last_visit] > 1.hour
         @current_visitor.update(numberofvisits: @current_visitor.numberofvisits + 1)
       end
 
