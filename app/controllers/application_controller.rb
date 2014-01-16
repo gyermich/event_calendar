@@ -22,16 +22,15 @@ class ApplicationController < ActionController::Base
         @current_visitor = Visitor.create(find_visitor_info)
         
         cookies[:visitor_id] = @current_visitor.id
-        cookies[:last_visit] = Time.now
+        cookies[:last_visit] = Time.now.to_i
       end
 
-      if Time.now - cookies[:last_visit] > 1.hour
+      if Time.now.to_i - cookies[:last_visit].to_i > 1.hour
         @current_visitor.update(numberofvisits: @current_visitor.numberofvisits + 1)
       end
 
       cookies[:last_visit] = Time.now
     end
-
     @current_visitor
   end
   helper_method :current_visitor
