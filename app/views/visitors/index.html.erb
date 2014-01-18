@@ -1,28 +1,112 @@
-<table>
-  <thead>
-    <th>Id</th>
-    <th>Pageviews</th>
-    <th>IP address</th>
-    <th>Referrer</th>
-    <th>Amount of visits</th>
-    <th>Device</th>
-    <th>Browser</th>
-    <th>Version</th>
-    <th>Mobile</th>
-  </thead>
+<div class="stats">
+  <div class="cvs">
+    <div id="canvas_header">Visits Overview</div>
+    <canvas id="visitors" src="stats.js" width=480 height=300>
+      <table>
+        <thead>
+          <th>Amount of Visits</th>
+          <th>Unique Visits</th>
+          <th>Pageviews</th>
+        </thead>
+        <tbody>
+          <td id="amountOfVisits"><%= @visitors.amount_of_visits %></td>
+          <td id="uniqueVisits"><%= @visitors.unique_visits %></td>
+          <td id="pageviews"><%= @visitors.page_views %></td>
+        </tbody>
+      </table>
+    </canvas>
+  </div>
 
-    <% Visitor.all.each do |v| %>
-      <tbody>
-    <td><%= v.id %></td>
-    <td><%= v.pageviews %></td>
-    <td><%= v.ip_address %></td>
-    <td><%= v.referrer %></td>
-    <td><%= v.numberofvisits %></td>
-    <td><%= v.device %></td>
-    <td><%= v.browser %></td>
-    <td><%= v.browserversion %></td>
-    <td><%= v.mobile %></td>
+  <div class="cvs">
+    <div id="canvas_header">Devices Overview</div>
+    <canvas id="devices" src="stats.js" width=480 height=300>
+      <table>
+        <thead>
+          <th>Mobile</th>
+          <th>Windows</th>
+          <th>Mac</th>
+          <th>Other</th>
+        </thead>
+        <tbody>
+          <td id="mobile_users"><%= @visitors.mobile_users %></td>
+          <td id="windows_users"><%= @visitors.windows_users%></td>
+          <td id="mac_users"><%= @visitors.mac_users%></td>
+          <td id="other_users"><%= @visitors.other_users %></td>
+        </tbody>
+      </table>
+    </canvas>
+  </div>
 
-  </tbody>
-   <%end%>
-</table>
+  <div class="cvs">
+    <div id="canvas_header">Visitors Overview</div>
+    <canvas id="referred" src="stats.js" width=480 height=300>
+      <table>
+        <thead>
+          <th>Referred Visitors</th>
+          <th>Direct Visitors</th>
+        </thead>
+        <tbody>
+          <td id="referred_users"><%= @visitors.mobile_users %></td>
+          <td id="direct_users"><%= @visitors.direct_users%></td>
+        </tbody>
+      </table>
+    </canvas>
+  </div>
+
+  <div class="cvs">
+    <div id="canvas_header">Browsers Overview</div>
+    <canvas id="browsers" src="stats.js" width=480 height=300>
+      <table>
+        <thead>
+          <th>Chrome</th>
+          <th>Safari</th>
+          <th>Firefox</th>
+          <th>IE</th>
+          <th>Other</th>
+        </thead>
+        <tbody>
+          <td id="chrome"><%= @visitors.chrome %></td>
+          <td id="safari"><%= @visitors.safari%></td>
+          <td id="firefox"><%= @visitors.firefox%></td>
+          <td id="ie"><%= @visitors.ie %></td>
+          <td id="other"><%= @visitors.other %></td>
+        </tbody>
+      </table>
+    </canvas>
+  </div>
+  </br>
+  <hr>
+
+
+  <h3>Traffic Details: </h3>
+  <table class="stats_table">
+    <thead>
+      <th class="narrow">Id</th>
+      <th class="narrow">Pageviews</th>
+      <th>IP address</th>
+      <th>Referrer</th>
+      <th class="narrow">Amount of visits</th>
+      <th>Device</th>
+      <th>Browser</th>
+      <th>Version</th>
+      <th>Mobile</th>
+    </thead>
+
+      <% Visitor.all.each do |v| %>
+    <tbody>
+      <td class="narrow"><%= v.id %></td>
+      <td class="narrow"><%= v.pageviews %></td>
+      <td><%= v.ip_address %></td>
+      <td><%= v.referrer %></td>
+      <td class="narrow"><%= v.numberofvisits %></td>
+      <td><%= v.device %></td>
+      <td><%= v.browser %></td>
+      <td><%= v.browserversion %></td>
+      <td><%= v.mobile %></td>
+    </tbody>
+     <%end%>
+  </table>
+</div>
+
+
+

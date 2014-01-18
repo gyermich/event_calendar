@@ -401,3 +401,46 @@ a.next-month, a.previous-month {
   display: inline;
 }
 
+/*Stats Page*/
+.stats{
+padding-top: 10px;
+ width : 1020px;
+  margin: auto;
+}
+
+.stats h3 {
+  text-align: center;
+}
+
+.cvs{
+  float:left;
+  margin: 5px;
+  padding: 5px;
+  display:inline;
+}
+#canvas_header {
+  display   : block;
+  height    : 30px;
+  width     : 480px;
+  color     : #616b76;
+  padding   : 5px;
+  text-align: center;
+  background: #D9E2E1;
+}
+
+.stats_table {
+  width           : 100%;
+  padding         : 0;
+  margin          : 0;
+  border-left     : 1px solid #A2ADBC;
+  font            : normal 15px/20px 'Comfortaa';
+  color           : #616B76;
+  background-color: #fff;
+}
+.stats_table td {
+  border-right  : 1px solid #A2ADBC;
+  border-bottom : 1px solid #A2ADBC;
+  vertical-align: top;
+}
+
+

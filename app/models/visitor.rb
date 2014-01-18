@@ -1,30 +1,58 @@
 class Visitor < ActiveRecord::Base
 
-
-  def self.return_visitors
-    where('pageviews > 1')
+  def self.mobile_users
+    where(mobile: true).count
   end
 
-  def self.unique_visitors
-    where(page_visits: 1)
+  def self.windows_users
+    where('device LIKE ?', '%Windows%').count
+  end
+
+  def self.mac_users
+    where('device LIKE ?', '%Mac%').count
+  end
+
+  def self.other_users
+    count - windows_users - mac_users
+  end
+
+  def self.amount_of_visits
+    sum(:numberofvisits)
+  end
+
+  def self.unique_visits 
+    sum(:id)
+  end
+
+  def self.page_views
+    sum(:pageviews)
+  end  
+
+  def self.direct_users
+    where(:referrer.nil?).count
+  end 
+
+  def self.referred_users
+    count - direct_users
+  end  
+
+  def self.chrome
+    where('browser LIKE ?', '%Chrome%').count
+  end
+
+  def self.safari
+    where('browser LIKE ?', '%Safari%').count
+  end
+
+  def self.firefox
+    where('browser LIKE ?', '%Firefox%').count
+  end
+
+  def self.ie
+    where('browser LIKE ?', '%MSIE%').count
   end
   
-
-  def self.mobile_users
-    where(mobile: true)
+  def self.other
+    all.count - chrome - safari - firefox - ie 
   end
- 
-
-  def self.non_mobile_users
-    where(mobile: false)
-  end
-
-  def self.total_visitors
-    sum(:ip_address)
-  end
-
-  # def self.device
-  #   :set_parser
-  #   parser.device
-    
 end

@@ -20,7 +20,6 @@ class ApplicationController < ActionController::Base
         @current_visitor = Visitor.find(cookies.permanent[:visitor_id])
       else 
         @current_visitor = Visitor.create(find_visitor_info)
-        
         cookies.permanent[:visitor_id] = @current_visitor.id
         cookies.permanent[:last_visit] = Time.now.to_i
       end
@@ -53,7 +52,7 @@ class ApplicationController < ActionController::Base
   end
 
   def update_pageviews_count
-    current_visitor.update(pageviews: current_visitor.pageviews + 1)
+    # current_visitor.update(pageviews: current_visitor.pageviews + 1)
   end
   
 end
