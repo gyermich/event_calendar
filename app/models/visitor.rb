@@ -21,7 +21,7 @@ class Visitor < ActiveRecord::Base
   end
 
   def self.unique_visits 
-    sum(:id)
+    all.count
   end
 
   def self.page_views
