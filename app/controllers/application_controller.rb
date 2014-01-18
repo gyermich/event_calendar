@@ -52,7 +52,7 @@ class ApplicationController < ActionController::Base
   end
 
   def update_pageviews_count
-    # current_visitor.update(pageviews: current_visitor.pageviews + 1)
+    current_visitor.update(pageviews: current_visitor.pageviews + 1)
   end
   
 end
