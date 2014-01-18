@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140115000249) do
+ActiveRecord::Schema.define(version: 20140118060221) do
 
   create_table "comments", force: true do |t|
     t.text     "body"
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20140115000249) do
     t.string   "ip_address"
     t.integer  "pageviews",      default: 0
     t.text     "referrer"
-    t.integer  "numberofvisits", default: 0
+    t.integer  "numberofvisits", default: 1
     t.string   "device"
     t.string   "browser"
     t.string   "browserversion"
