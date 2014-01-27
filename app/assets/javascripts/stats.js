@@ -316,8 +316,8 @@ document.addEventListener( "DOMContentLoaded" , function( e ){
     context.font = '16pt Helvetica';
     context.fillStyle = '#616B76';
     context.fillText( refInRadsPercent + "%",
-                       canvas.width/3 +60,
-                       canvas.height/2 +60
+                       canvas.width/3 +90,
+                       canvas.height/2 +30
                       );
     context.fillText( dirInRadsPercent + "%",
                        canvas.width/3 -60,
