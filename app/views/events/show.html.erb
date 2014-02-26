@@ -37,7 +37,7 @@
 
     <p><strong>Where:</strong>
     <span id="address"><%= @event.address %></span></p>
-    <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=11&markers=#{@event.latitude}%2C#{@event.longitude}&path=color:0x0000ff|weight:5|47.6087563,-122.3343051|#{@event.latitude}%2C#{@event.longitude}" %>
+    <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=11&markers=#{@event.latitude}%2C#{@event.longitude}|47.6087563,-122.3343051" %>
 
     <!-- <div style='width: 300px;'>
       <div id="directions" style='width: 300px; height: 200px;'></div>
