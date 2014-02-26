@@ -1,8 +1,8 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :destroy, :join, :not_going, :update]
   before_filter :authorize, only: [:new, :create, :join, :edit, :destroy]
-   before_action :update_pageviews_count, only: [:index, :new, :edit]
-   helper_method :current_visitor
+  # before_action :update_pageviews_count, only: [:index, :new, :edit]
+  helper_method :current_visitor
 
   def new
     @event = Event.new
@@ -22,9 +22,10 @@ class EventsController < ApplicationController
     @event           = Event.new(event_params)
     @event[:user_id] = session[:user_id]
     if @event.save
-      User.all.each do |user|
-        UserMailer.event_notification(user, @event).deliver
-      end
+      # User.all.each do |user|
+      #   UserMailer.event_notification(user, @event).deliver
+      # end
+      flash[:notice] = "Event added to calendar!"
       redirect_to event_path(@event)
     else
       render :new
@@ -68,6 +69,6 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:name, :description, :date)
+    params.require(:event).permit(:name, :description, :date, :address, :latitude, :longitude)
   end
 end
