@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140118060221) do
+ActiveRecord::Schema.define(version: 20140226082939) do
 
   create_table "comments", force: true do |t|
     t.text     "body"
@@ -28,6 +28,10 @@ ActiveRecord::Schema.define(version: 20140118060221) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.text     "description"
+    t.string   "address"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.float    "distance"
   end
 
   create_table "events_users", force: true do |t|

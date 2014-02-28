@@ -1,4 +1,3 @@
-
 <div id="side">
   <div id="guests">
     <% if current_user %>
@@ -21,19 +20,23 @@
     <h2><%= @event.name %></h2>
 
     <% if current_user && current_user.id == @event.user_id %>
-    <div id="small">
-      <%= link_to 'Edit Event', edit_event_path(@event) %> |
-  
-      <%= link_to 'Delete', @event, method: :delete, data: {confirm: 'Are you sure?'} %>
-    </div> 
+      <div id="small">
+        <%= link_to 'Edit Event', edit_event_path(@event) %> |
+        <%= link_to 'Delete', @event, method: :delete, data: {confirm: 'Are you sure?'} %>
+      </div> 
     <% else %>
       <div id="small">
         Added by <%= "#{User.find_by_id(@event.user_id).name}"%></br>
       </div>
-     <% end %>
+    <% end %>
 
-    <p><strong>When:</strong>
-    <span id="descr"><%= @event.date.strftime(" %B %d at %I:%M %p") %></span></p>
+    <p>
+      <strong>When:</strong>
+      <span id="descr"><%= @event.date.strftime(" %B %d at %I:%M %p") %></span>
+    </p>
+
+    <%= render 'map' unless @event.address.blank? %>
+
     <table id="simple_format">
       <tr>
         <td><p><strong>Details:</strong></p></td>

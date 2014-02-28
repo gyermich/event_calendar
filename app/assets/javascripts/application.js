@@ -12,16 +12,17 @@
 //
 //= require jquery
 //= require jquery_ujs
-//require turbolinks
+//= require underscore
+//= require gmaps/google
 //= require_tree .
 
 function toggle_visibility(id) {
-       var e = document.getElementById(id);
-       if(e.style.display == 'block')
-          e.style.display = 'none';
-       else
-          e.style.display = 'block';
-    }
+  var e = document.getElementById(id);
+  if(e.style.display == 'block')
+    e.style.display = 'none';
+  else
+    e.style.display = 'block';
+}
 
 $(function(){
   $('#profiletabs ul li a').on('click', function(e){
@@ -39,16 +40,12 @@ $(function(){
   });
 });
 
-
 $(function() {
-    $('a.popper').hover(function(e) {
-   
-        var target = '#' + ($(this).attr('data_popbox'));
-         
-        $(target).show();
+  $('a.popper').hover(function(e) {
+    var target = '#' + ($(this).attr('data_popbox'));
+    $(target).show();
     }, function() {
         var target = '#' + ($(this).attr('data_popbox'));
         $(target).hide();
-    });
- 
+  });
 });
