@@ -23,7 +23,7 @@ describe EventsController do
   end
 
   describe "GET 'show'" do
-    let(:event){ Event.create!(name:"Birthday", description:"some txt", user_id:1, date:'2014-01-08T19:00', address: "")  }
+    let(:event){ Event.create!(name:"Birthday", description:"some txt", user_id:1, date:'2014-01-08T19:00', address: nil)  }
 
     it 'renders the show template' do
       get :show, id: event.id
