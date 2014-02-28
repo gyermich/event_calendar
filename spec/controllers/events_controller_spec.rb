@@ -21,4 +21,14 @@ describe EventsController do
       expect(assigns(:events)).to match_array([event1, event2])
     end
   end
+
+  describe "GET 'show'" do
+    let(:event){ Event.create!(name:"Birthday", description:"some txt", user_id:1, date:'2014-01-08T19:00') }
+
+    it 'renders the show template' do
+      get :show, id: event.id
+      p event
+      expect(response).to be_success
+    end
+  end
 end

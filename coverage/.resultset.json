@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Gala/ada-class/projects/calendar/calendar/config/environment.rb": [
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/config/environment.rb": [
         null,
         1,
         null,
@@ -21,7 +21,7 @@
         null,
         null
       ],
-      "/Users/Gala/ada-class/projects/calendar/calendar/config/application.rb": [
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/config/application.rb": [
         1,
         null,
         1,
@@ -46,13 +46,13 @@
         null,
         null
       ],
-      "/Users/Gala/ada-class/projects/calendar/calendar/config/boot.rb": [
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/config/boot.rb": [
         null,
         1,
         null,
         1
       ],
-      "/Users/Gala/ada-class/projects/calendar/calendar/config/environments/test.rb": [
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/config/environments/test.rb": [
         1,
         null,
         null,
@@ -90,7 +90,7 @@
         1,
         null
       ],
-      "/Users/Gala/ada-class/projects/calendar/calendar/config/initializers/backtrace_silencers.rb": [
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -99,13 +99,13 @@
         null,
         null
       ],
-      "/Users/Gala/ada-class/projects/calendar/calendar/config/initializers/filter_parameter_logging.rb": [
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/Gala/ada-class/projects/calendar/calendar/config/initializers/inflections.rb": [
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -123,14 +123,14 @@
         null,
         null
       ],
-      "/Users/Gala/ada-class/projects/calendar/calendar/config/initializers/mime_types.rb": [
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null,
         null
       ],
-      "/Users/Gala/ada-class/projects/calendar/calendar/config/initializers/secret_token.rb": [
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/config/initializers/secret_token.rb": [
         null,
         null,
         null,
@@ -144,12 +144,12 @@
         null,
         1
       ],
-      "/Users/Gala/ada-class/projects/calendar/calendar/config/initializers/session_store.rb": [
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/Gala/ada-class/projects/calendar/calendar/config/initializers/wrap_parameters.rb": [
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -165,20 +165,9 @@
         null,
         null
       ],
-      "/Users/Gala/ada-class/projects/calendar/calendar/config/routes.rb": [
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/config/routes.rb": [
         1,
         null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
         1,
         1,
         1,
@@ -188,87 +177,71 @@
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/Gala/ada-class/projects/calendar/calendar/app/helpers/application_helper.rb": [
+        1,
         1,
         null
       ],
-      "/Users/Gala/ada-class/projects/calendar/calendar/app/helpers/comment_helper.rb": [
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/Gala/ada-class/projects/calendar/calendar/app/helpers/events_helper.rb": [
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/app/helpers/comment_helper.rb": [
         1,
         null
       ],
-      "/Users/Gala/ada-class/projects/calendar/calendar/app/helpers/events_users_helper.rb": [
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/app/helpers/events_helper.rb": [
+        1,
+        1,
+        0,
+        null,
+        null,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/app/helpers/events_users_helper.rb": [
         1,
         null
       ],
-      "/Users/Gala/ada-class/projects/calendar/calendar/app/helpers/session_helper.rb": [
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/app/helpers/session_helper.rb": [
         1,
         null
       ],
-      "/Users/Gala/ada-class/projects/calendar/calendar/app/helpers/users_helper.rb": [
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/app/helpers/users_helper.rb": [
         1,
         null
       ],
-      "/Users/Gala/ada-class/projects/calendar/calendar/app/controllers/events_controller.rb": [
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/app/helpers/visitors_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/app/controllers/events_controller.rb": [
         1,
         1,
+        1,
+        null,
         1,
         null,
         1,
@@ -289,16 +262,9 @@
         0,
         0,
         0,
-        0,
-        0,
-        null,
-        0,
-        null,
-        0,
         null,
         null,
         null,
-        1,
         0,
         0,
         null,
@@ -309,6 +275,14 @@
         1,
         0,
         0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
         0,
         null,
         null,
@@ -331,7 +305,7 @@
         1,
         null,
         1,
-        0,
+        1,
         null,
         null,
         1,
@@ -339,7 +313,7 @@
         null,
         null
       ],
-      "/Users/Gala/ada-class/projects/calendar/calendar/app/controllers/application_controller.rb": [
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -348,16 +322,54 @@
         1,
         null,
         1,
-        1,
+        0,
         null,
         1,
         null,
         1,
-        1,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null
       ],
-      "/Users/Gala/ada-class/projects/calendar/calendar/spec/controllers/users_controller_spec.rb": [
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/spec/controllers/users_controller_spec.rb": [
         1,
         null,
         1,
@@ -389,7 +401,7 @@
         null,
         null
       ],
-      "/Users/Gala/ada-class/projects/calendar/calendar/app/controllers/users_controller.rb": [
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/app/controllers/users_controller.rb": [
         1,
         1,
         null,
@@ -407,7 +419,7 @@
         1,
         0,
         0,
-        0,
+        null,
         0,
         0,
         null,
@@ -434,7 +446,40 @@
         null,
         null
       ],
-      "/Users/Gala/ada-class/projects/calendar/calendar/spec/models/comment_spec.rb": [
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/spec/controllers/visitors_controller_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/app/controllers/visitors_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/spec/helpers/visitors_helper_spec.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/spec/models/comment_spec.rb": [
         1,
         null,
         1,
@@ -446,13 +491,13 @@
         null,
         null
       ],
-      "/Users/Gala/ada-class/projects/calendar/calendar/app/models/comment.rb": [
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/app/models/comment.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/Gala/ada-class/projects/calendar/calendar/spec/models/event_spec.rb": [
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/spec/models/event_spec.rb": [
         1,
         null,
         1,
@@ -477,8 +522,14 @@
         null,
         null
       ],
-      "/Users/Gala/ada-class/projects/calendar/calendar/app/models/event.rb": [
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/app/models/event.rb": [
         1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         1,
         1,
         1,
@@ -489,9 +540,80 @@
         1,
         0,
         null,
+        null,
+        1,
+        0,
+        null,
         null
       ],
-      "/Users/Gala/ada-class/projects/calendar/calendar/app/models/user.rb": [
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/spec/models/visitor_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/app/models/visitor.rb": [
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/hsing-huihsu/Ada-class/rails_projects/event_calendar/app/models/user.rb": [
         1,
         1,
         1,
@@ -503,6 +625,6 @@
         null
       ]
     },
-    "timestamp": 1388962013
+    "timestamp": 1393560452
   }
 }
