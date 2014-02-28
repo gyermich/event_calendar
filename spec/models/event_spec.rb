@@ -20,4 +20,11 @@ describe Event do
       expect(event).to be_invalid
     end
   end
+
+  context 'with address' do
+
+    describe 'before saving' do
+    end
+
+  end
 end

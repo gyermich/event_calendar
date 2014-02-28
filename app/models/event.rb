@@ -15,6 +15,7 @@ class Event < ActiveRecord::Base
     date
   end
 
+  # coordinates of Rainier Square
   def distance
     self.distance_from([47.6087563,-122.3343051], :mi).round(2)
   end
