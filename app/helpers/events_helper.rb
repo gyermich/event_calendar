@@ -10,12 +10,22 @@ module EventsHelper
         zoom = 14
       when event.distance < 1.5
         zoom = 13
-      when event.distance < 3
+      when event.distance < 4
         zoom = 12
-      when event.distance < 6
+      when event.distance < 8
         zoom = 11
-      else
+      when event.distance < 12
         zoom = 10
+      when event.distance < 50
+        zoom 9
+      when event.distance < 100
+        zoom = 8
+      when event.distance < 120
+        zoom = 7
+      when event.distance < 150
+        zoom = 6
+      else
+        zoom = 5
     end
     zoom
   end
