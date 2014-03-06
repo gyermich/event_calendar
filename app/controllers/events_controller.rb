@@ -23,7 +23,7 @@ class EventsController < ApplicationController
     @event[:user_id] = session[:user_id]
     if @event.save
       User.all.each do |user|
-        # UserMailer.event_notification(user, @event).deliver
+        UserMailer.event_notification(user, @event).deliver
       end
       flash[:notice] = "Event added to calendar!"
       redirect_to event_path(@event)
