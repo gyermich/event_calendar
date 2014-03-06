@@ -25,7 +25,7 @@
       <div id="small">
         <%= link_to 'Edit Event', edit_event_path(@event) %> |
         <%= link_to 'Delete', @event, method: :delete, data: {confirm: 'Are you sure?'} %>
-      </div> 
+      </div>
     <% else %>
       <div id="small">
         Added by <%= "#{User.find_by_id(@event.user_id).name}"%></br>
@@ -35,20 +35,24 @@
     <p><strong>When:</strong>
     <span id="descr"><%= @event.date.strftime(" %B %d at %I:%M %p") %></span></p>
 
-    <p>
-      <strong>Where:</strong>
-      <span id="address"><%= @event.address %></span>
-    </p>
-    <p>
-      <strong>Distance from ADA:</strong>
-      <span id= "distance"><%=@event.distance %> miles</span>
-    </p>
-    <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=#{zoom}&markers=#{@event.latitude}%2C#{@event.longitude}|47.6087563,-122.3343051" %>
-     <!-- zoom helper is imperfect -->
+   <%  if @event.address %>
 
-    <!-- <div style='width: 300px;'>
-      <div id="directions" style='width: 300px; height: 200px;'></div>
-    </div> -->
+      <p>
+        <strong>Where:</strong>
+        <span id="address"><%= @event.address %></span>
+      </p>
+      <p>
+        <strong>Distance from ADA:</strong>
+        <span id= "distance"><%=@event.distance %> miles</span>
+      </p>
+      <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=#{zoom}&markers=#{@event.latitude}%2C#{@event.longitude}|47.6087563,-122.3343051" %>
+       <!-- zoom helper is imperfect -->
+
+      <!-- <div style='width: 300px;'>
+        <div id="directions" style='width: 300px; height: 200px;'></div>
+      </div> -->
+
+    <% end %>
 
     <table id="simple_format">
       <tr>
@@ -58,8 +62,8 @@
     </table>
 
     <table id="button_table">
-    <% if current_user && EventsUser.find_by(user_id: current_user.id, event_id:@event.id) %> 
-      <tr>  
+    <% if current_user && EventsUser.find_by(user_id: current_user.id, event_id:@event.id) %>
+      <tr>
         <td><strong>Can't make it?</strong></td>
 
         <td>
@@ -82,6 +86,6 @@
     <hr>
     <%= render 'comments' %>
   </div>
-   
+
 </div>
-  
+
