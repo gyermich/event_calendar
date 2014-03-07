@@ -20,7 +20,7 @@ Calendar::Application.configure do
   # config.action_dispatch.rack_cache = true
 
   # config.action_mailer.raise_delivery_errors = false
-  # config.action_mailer.default_url_options = {:host => 'portal.herokuapp.com'} 
+  # config.action_mailer.default_url_options = {:host => 'portal.herokuapp.com'}
   # config.action_mailer.perform_deliveries = true
   # config.action_mailer.delivery_method = :smtp
   # config.action_mailer.smtp_settings = {
@@ -50,7 +50,7 @@ config.action_mailer.default_url_options = { :host => 'ada-calendar.herokuapp.co
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Generate digests for assets URLs.
   config.assets.digest = true

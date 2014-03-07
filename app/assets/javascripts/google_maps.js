@@ -18,7 +18,12 @@ function calcRoute() {
 
 calcRoute();
 
-var handler = Gmaps.build('Google');
-handler.buildMap({ internal: {id: 'directions'}}, function(){
-  directionsDisplay.setMap(handler.getMap());
+
+$(document).ready(function() {
+  if ($("#directions").length >0 ) {
+    var handler = Gmaps.build('Google');
+    handler.buildMap({ internal: {id: 'directions'}}, function(){
+      directionsDisplay.setMap(handler.getMap());
+    });
+  }
 });
