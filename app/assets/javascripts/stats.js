@@ -213,7 +213,7 @@ context.fillText( "Page Views", 360, 183 );
 
 (function(){
   document.addEventListener( "DOMContentLoaded", function(e){
-var canvas = document.querySelector( '#browsers');
+var canvas = document.querySelector( '#visits');
 var context = canvas.getContext('2d');
 var drawBarRect = function(height, color, xCoord){
 context.beginPath();
