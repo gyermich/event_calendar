@@ -97,7 +97,7 @@
       <td class="narrow"><%= v.id %></td>
       <td class="narrow"><%= v.pageviews %></td>
       <td><%= v.ip_address %></td>
-      <td><%= v.referrer %></td>
+      <td><%= truncate(v.referrer, length:33) %></td>
       <td class="narrow"><%= v.numberofvisits %></td>
       <td><%= v.device %></td>
       <td><%= v.browser %></td>
