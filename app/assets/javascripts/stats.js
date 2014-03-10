@@ -37,11 +37,11 @@
           ie = parseInt( ieEl.innerHTML, 10 );
           other = parseInt( otherEl.innerHTML, 10 );
 
-      var cHeight = 270,
-          fHeight = (firefox*100/chrome)*270/100,
-          sHeight = (safari*100/chrome)*270/100,
-          iHeight = (ie*100/chrome)*270/100,
-          oHeight = (other*100/chrome)*270/100,
+      var oHeight = 270,
+          fHeight = (firefox*100/other)*270/100,
+          sHeight = (safari*100/other)*270/100,
+          iHeight = (ie*100/other)*270/100,
+          cHeight = (chrome*100/other)*270/100,
           yText   = canvas.height - 3;
 
       drawBarRect(cHeight,'#F6F4DB', 5 );
@@ -118,10 +118,10 @@
             macUsers = parseInt( macUsersEl.innerHTML, 10 );
             otherUsers = parseInt( otherUsersEl.innerHTML, 10 );
 
-        var mHeight = 270,
-            mbHeight = (mobileUsers*100/macUsers)*270/100,
-            wHeight = (windowsUsers*100/macUsers)*270/100,
-            oHeight = (otherUsers*100/macUsers)*270/100,
+        var oHeight = 270,
+            mbHeight = (mobileUsers*100/otherUsers)*270/100,
+            wHeight = (windowsUsers*100/otherUsers)*270/100,
+            mHeight = (otherUsers*100/otherUsers)*270/100,
             yText   = canvas.height - 3;
 
         drawBarRect(mHeight,'#F6F4DB', 13 );
@@ -148,7 +148,7 @@
         context.fillText( "Mac Users", 360, 113 );
         context.fillText( "Mobile Users", 360, 148);
         context.fillText( "Windows Users", 360, 183 );
-        context.fillText( "Other Users", 360, 218 );
+        context.fillText( "Other", 360, 218 );
       }
       else {
         return;

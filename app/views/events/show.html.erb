@@ -40,7 +40,7 @@
     <table id="simple_format">
       <tr>
         <td><p><strong>Details:</strong></p></td>
-        <td><span id="descr"><%= simple_format(@event.description.gsub(URI.regexp, '<a href="\0">\0</a>')).html_safe %></span></td>
+        <td><span id="descr"><%= simple_format(@event.description.gsub(/(http[s]?:\/\/[a-zA-Z0-9\/\.\+\-_:?&=]+)/) {|a| "<a href=\"#{a}\" target='_blank'>#{a}</a>"}).html_safe %></span></td>
       </tr>
     </table>
 
